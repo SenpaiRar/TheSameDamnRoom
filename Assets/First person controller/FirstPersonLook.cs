@@ -19,7 +19,7 @@ public class FirstPersonLook : MonoBehaviour
     void Start()
     {
         canLook = true;
-        Cursor.lockState = CursorLockMode.None;
+        Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = false;
     }
 
