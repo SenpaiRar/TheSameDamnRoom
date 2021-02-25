@@ -5,6 +5,10 @@ public class Window : MonoBehaviour, IScreenInteractable
 {
     private NewMouse playerMouse;
     private MeshRenderer meshRenderer;
+    private MeshCollider meshCollider;
+
+    private MeshRenderer[] childMeshRenderers;
+    private MeshCollider[] childMeshColliders;
 
     private bool isVisible;
 
@@ -17,6 +21,11 @@ public class Window : MonoBehaviour, IScreenInteractable
     {
         playerMouse = GameObject.Find("Cursor").GetComponent<NewMouse>();
         meshRenderer = gameObject.GetComponent<MeshRenderer>();
+        meshCollider = gameObject.GetComponent<MeshCollider>();
+
+        childMeshRenderers = gameObject.GetComponentsInChildren<MeshRenderer>();
+        childMeshColliders = gameObject.GetComponentsInChildren<MeshCollider>();
+
     }
 
     public void OnLongClick()
@@ -32,12 +41,32 @@ public class Window : MonoBehaviour, IScreenInteractable
     public void ToggleWindow(bool newState)
     {
         isVisible = newState;
+
         meshRenderer.enabled = isVisible;
+        meshCollider.enabled = isVisible;
+        foreach (var item in childMeshRenderers)
+        {
+            item.enabled = isVisible;
+        }
+        foreach (var item in childMeshColliders)
+        {
+            item.enabled = isVisible;
+        }
     }
     public void ToggleWindow()
     {
         isVisible = !isVisible;
         meshRenderer.enabled = isVisible;
+        meshCollider.enabled = isVisible;
+        foreach (var item in childMeshRenderers)
+        {
+            item.enabled = isVisible;
+        }
+        foreach (var item in childMeshColliders)
+        {
+            item.enabled = isVisible;
+        }
+
     }
     public void OnInitClick()
     {

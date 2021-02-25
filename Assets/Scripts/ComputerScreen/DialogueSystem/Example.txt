@@ -1,4 +1,20 @@
-﻿<James>
-{Hey Nova why aren't you at school anymore? We miss teasing you}
-<Jenna>
+﻿<James
+{Hey Nova why aren't you at school anymore? We miss teasing you
+<Jenna
 {Shut up James, they have their reason you know.}
+<James
+{Ok, I'm sorry
+<Ben
+{He, just... really misses you
+<Nova
+{Yea... it's alright James. My parents are just worried about me
+<James
+{What happened?... if oyu dont midn me asking
+<Nova
+{No, my parents just want me to stay safe from the pandemic thing, so they put me on online school.
+<James
+{Oh man that <b>sucks!</b>
+<Jenna
+{Is there anything we can do to help?
+<Nova
+{I would say <i>pizza</i> but my parents are uber into isolation
