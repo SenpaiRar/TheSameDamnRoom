@@ -80,27 +80,6 @@ public class DialogueSystem : MonoBehaviour
         UpdateText();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-         if(lowerLimit > 0)
-            {
-                lowerLimit--;
-                UpdateText();
-            }
-
-        }
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            if(lowerLimit < higherLimit)
-            {
-                lowerLimit++;
-                UpdateText();
-            }
-        }
-    }
-
 
     public void UpdateText()
     {
@@ -111,5 +90,21 @@ public class DialogueSystem : MonoBehaviour
         }
 
        
+    }
+    public void MoveUpText()
+    {
+        if (lowerLimit > 0)
+        {
+            lowerLimit--;
+            UpdateText();
+        }
+    }
+    public void MoveDownText()
+    {
+        if (lowerLimit < higherLimit)
+        {
+            lowerLimit++;
+            UpdateText();
+        }
     }
 }

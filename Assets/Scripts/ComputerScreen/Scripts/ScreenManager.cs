@@ -19,7 +19,7 @@ public class ScreenManager : MonoBehaviour
     
     private void Awake()
     {
-        initialDistance = screenRenderCamera.nearClipPlane + Offset + screenRenderCamera.transform.position.z;
+        initialDistance = screenRenderCamera.nearClipPlane + Offset + screenRenderCamera.transform.position.z + 5 ;//taking into accout mouse position
         Window.OnWindowSelected += SendToFront;
         
     }

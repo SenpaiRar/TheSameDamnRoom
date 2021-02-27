@@ -69,6 +69,7 @@ public class NewMouse : MonoBehaviour
         {
             hoveredInteractable = info.collider.GetComponent<IScreenInteractable>();
             hoveredInteractable.OnInitClick();
+            Debug.Log("Interacting with " + info.collider.name);
         }
     }
     public void EnableMouse()
